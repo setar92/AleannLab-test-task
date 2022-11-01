@@ -1,7 +1,13 @@
 import React, { FC } from 'react';
 
+import { Routing } from './navigation/routing/routing';
+
 const App: FC = () => {
-  return <div className=" font-bold">Jobs</div>;
+  return (
+    <>
+      <Routing />
+    </>
+  );
 };
 
 export { App };
