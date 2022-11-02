@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import { AppRoute } from '../../common/enums/path-enum';
+import { AppRoute } from '../../common/enums';
 import { DetailesPage, JobsPage } from '../../pages';
 
 const Routing: FC = () => {
