@@ -9,7 +9,8 @@ const Routing: FC = () => {
     <BrowserRouter>
       <Routes>
         <Route path={AppRoute.JOBS} element={<JobsPage />} />
-        <Route path={AppRoute.DETAILS} element={<DetailesPage />} />
+        <Route path={AppRoute.DETAILS + '/:id'} element={<DetailesPage />} />
+        <Route path={AppRoute.NOT_FOUND} element={<JobsPage />} />
       </Routes>
     </BrowserRouter>
   );
