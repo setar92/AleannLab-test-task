@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { JobItem } from '../components/job-item';
+import { JobItem } from '../components/job-item/job-item';
 import { useAppSelector } from '../hooks/store/store.hooks';
 import { useGetJobsListQuery } from '../store/queries/jobs';
 
