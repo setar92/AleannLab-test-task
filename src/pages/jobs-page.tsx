@@ -10,7 +10,7 @@ const JobsPage: FC = () => {
   if (isLoading) return <div>isLoading</div>;
   if (isError) return <div>isError</div>;
   return (
-    <div>
+    <div className=" container">
       {jobs.map((job) => (
         <JobItem key={job.id} job={job} />
       ))}
