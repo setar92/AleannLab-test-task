@@ -11,12 +11,17 @@ module.exports = {
     },
     screens: {
       'ld': { 'max': '1920px' },
-      'sm': { 'max': '414px' },
+      'md': { 'max': '768px' },
+      'sm': { 'max': '480px' },
     },
     extend: {
       colors: {
-        primary: 'EFF0F5',
-        secondary: '#F5F5F5',
+        gray: '#878D9D',
+        fon: '#F5F5F5',
+        white: '#FFFFFF',
+        stars: '#38415D',
+        dark: '#3A4562',
+        grayText: '#878D9D',
       },
     },
   },
