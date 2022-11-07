@@ -17,6 +17,7 @@ module.exports = {
     extend: {
       colors: {
         gray: '#878D9D',
+        cardFon: '#EFF0F5',
         fon: '#F5F5F5',
         white: '#FFFFFF',
         stars: '#38415D',
