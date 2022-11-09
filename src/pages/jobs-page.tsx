@@ -13,12 +13,14 @@ const JobsPage: FC = () => {
   if (isLoading) return <div>isLoading</div>;
   if (isError) return <div>isError</div>;
   return (
-    <div className="container">
-      {currentJobs.map((job) => (
-        <JobItem key={job.id} job={job} />
-      ))}
+    <>
+      <div className="container">
+        {currentJobs.map((job) => (
+          <JobItem key={job.id} job={job} />
+        ))}
+      </div>
       <Pagination />
-    </div>
+    </>
   );
 };
 

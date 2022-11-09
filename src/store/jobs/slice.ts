@@ -5,7 +5,7 @@ import { JobsState } from '../../common/types';
 const initialState: JobsState = {
   jobs: [],
   currentPage: 1,
-  jobsPerPage: 2,
+  jobsPerPage: 5,
   totalPages: 0,
 };
 
