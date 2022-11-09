@@ -3,9 +3,14 @@ import { FC } from 'react';
 interface BookmarkIconProps {
   isFill: boolean;
   onClick: () => void;
+  className: string;
 }
 
-const BookmarkIcon: FC<BookmarkIconProps> = ({ isFill, onClick }) => {
+const BookmarkIcon: FC<BookmarkIconProps> = ({
+  isFill,
+  onClick,
+  className,
+}) => {
   const fill = isFill ? '#38415D' : 'none';
   return (
     <svg
@@ -15,7 +20,7 @@ const BookmarkIcon: FC<BookmarkIconProps> = ({ isFill, onClick }) => {
       fill={fill}
       xmlns="http://www.w3.org/2000/svg"
       onClick={onClick}
-      className=" hover:cursor-pointer"
+      className={className}
     >
       <path
         fillRule="evenodd"

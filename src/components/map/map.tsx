@@ -4,7 +4,7 @@ import { GoogleMap } from '@react-google-maps/api';
 
 import { MyMarker } from '..';
 import { ICoordinates } from '../../common/types';
-import { defaultOptions, containerStyle } from './options';
+import { defaultOptions } from './options';
 
 interface MapProps {
   position: ICoordinates;
@@ -21,9 +21,9 @@ const Map: FC<MapProps> = ({ position }) => {
   }, []);
 
   return (
-    <div>
+    <div className="w-[400px] h-[436px] rounded-lg">
       <GoogleMap
-        mapContainerStyle={containerStyle}
+        mapContainerClassName="w-[400px] h-[436px] rounded-lg"
         center={position}
         zoom={10}
         onLoad={onLoad}

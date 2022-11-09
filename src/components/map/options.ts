@@ -15,9 +15,4 @@ const defaultOptions = {
   styles: defaultTheme,
 };
 
-const containerStyle = {
-  width: '400px',
-  height: '400px',
-};
-
-export { defaultOptions, containerStyle };
+export { defaultOptions };
