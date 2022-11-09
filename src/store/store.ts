@@ -2,10 +2,10 @@ import { configureStore } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
 
 import { jobsApi } from './queries/jobs';
-import { jobs } from './root-reducer';
+import { jobsList } from './root-reducer';
 
 const rootReducer = combineReducers({
-  jobs,
+  jobsList,
   [jobsApi.reducerPath]: jobsApi.reducer,
 });
 

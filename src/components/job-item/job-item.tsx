@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { starIcon, locationIcon, BookmarkIcon } from '../../assets';
@@ -12,6 +12,10 @@ interface JobItemProps {
 
 const JobItem: FC<JobItemProps> = ({ job }) => {
   const img = `${job.pictures[0]}?id=${job.id}`;
+  const rate = useMemo(() => {
+    return getRandomNumber(3, 5);
+  }, []);
+
   const [isBookmarkFill, setIsBookmarkFill] = useState(false);
   const handleBookmarkClick = (): void => {
     setIsBookmarkFill(!isBookmarkFill);
@@ -34,7 +38,7 @@ const JobItem: FC<JobItemProps> = ({ job }) => {
       <div className="flex grow sm:flex-col-reverse">
         <div className="h-[116px] grow">
           <div
-            className="pb-1.5 h-[56px] font-bold overflow-clip text-xl text-dark/75 mb-2 hover:cursor-pointer md:text-lg"
+            className="pb-1.5 h-[56px] font-bold overflow-clip text-xl text-dark/75 mb-2 hover:cursor-pointer md:text-lg hover:underline"
             onClick={handleClick}
           >
             {job.title}
@@ -53,7 +57,7 @@ const JobItem: FC<JobItemProps> = ({ job }) => {
         </div>
         <div className="flex self-end md:flex-col md:justify-between md:h-[116px] sm:flex-row sm:grow sm:h-auto sm:self-auto sm:pt-1 sm:mb-4">
           <div className="min-w-[154px] flex items-center px-8 justify-start md:justify-end md:px-0 sm:items-start sm:justify-start sm:min-w-max sm:pt-1">
-            {new Array(getRandomNumber(3, 5)).fill('').map((it, index) => (
+            {new Array(rate).fill('').map((it, index) => (
               <img
                 key={index}
                 src={starIcon}

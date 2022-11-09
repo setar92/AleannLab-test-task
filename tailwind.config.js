@@ -17,12 +17,14 @@ module.exports = {
     extend: {
       colors: {
         gray: '#878D9D',
+        grey: '#70778B',
         cardFon: '#EFF0F5',
         fon: '#F5F5F5',
         white: '#FFFFFF',
         stars: '#38415D',
         dark: '#3A4562',
         grayText: '#878D9D',
+        brightBlue: '#5876C5',
       },
     },
   },

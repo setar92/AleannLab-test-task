@@ -18,8 +18,11 @@ interface IJob {
   employment_type: string[];
 }
 
-interface JobsState {
+type JobsState = {
   jobs: IJob[];
-}
+  currentPage: number;
+  jobsPerPage: number;
+  totalPages: number;
+};
 
 export type { IJob, JobsState };

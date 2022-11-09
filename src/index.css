@@ -11,6 +11,6 @@
 
 @layer components {
   .container {
-    @apply max-w-[1400px] py-6 md:p-2
+    @apply max-w-[1400px] py-6 px-2 md:p-2
   }
 }
