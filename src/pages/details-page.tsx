@@ -24,7 +24,7 @@ const DetailesPage: FC = () => {
   // } as ICoordinates;
 
   return (
-    <div className="bg-white w-[100wh] h-[100vh]">
+    <div className="bg-white w-[100wh]">
       <Details />
       {/* {isLoaded ? <Map position={position} /> : <div>Loading..</div>}
       <p>details id: {id}</p> */}

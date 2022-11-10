@@ -5,7 +5,7 @@ import { frameIcon, BookmarkIcon, saveStarIcon } from '../../assets';
 const Header: FC = () => {
   return (
     <header className="text-dark flex justify-between border-b-[1px] border-dark/20 md:flex-col md:border-none">
-      <div className="text-[28px] font-bold md:border-b-[1px] md:border-dark/20">
+      <div className="text-[28px] pb-2 font-bold md:border-b-[1px] md:border-dark/20">
         Job Details
       </div>
       <div className="font-normal text-lg flex sm:mt-6 sm:mb-8">
@@ -26,11 +26,11 @@ const Header: FC = () => {
         </div>
         <div className="flex items-center">
           <img
-            className="mr-2 hover:cursor-pointer sm:mr-0"
+            className="mr-2 hover:cursor-pointer md:mr-1 sm:mr-0"
             src={frameIcon}
             alt="frameIcon"
           />
-          <span className="md:text-base">Share</span>
+          <span className="md:text-base text-right">Share</span>
         </div>
       </div>
     </header>
