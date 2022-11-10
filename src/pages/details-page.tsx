@@ -1,12 +1,12 @@
 import { FC } from 'react';
 // import { useParams } from 'react-router-dom';
 
+// import { IJob } from '../common/types';
+import { Details } from '../components';
+// import { useAppSelector } from '../hooks/store/store.hooks';
 // import { useJsApiLoader } from '@react-google-maps/api';
 
 // import { ICoordinates } from '../common/types';
-import { Details } from '../components';
-// import { useAppSelector } from '../hooks/store/store.hooks';
-
 // import mockJobsJson from '../mock-data/mock-jobs.json';
 
 const DetailesPage: FC = () => {
@@ -17,7 +17,7 @@ const DetailesPage: FC = () => {
 
   // const { jobs } = useAppSelector((state) => state.jobsList);
   // const { id } = useParams();
-  // const job = jobs.find((job) => job.id === id);
+  // const job = jobs.find((job) => job.id === id) as IJob;
   // const position: ICoordinates = {
   //   lat: job?.location.lat,
   //   lng: job?.location.long,

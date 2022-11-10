@@ -8,7 +8,7 @@ const Header: FC = () => {
       <div className="text-[28px] font-bold md:border-b-[1px] md:border-dark/20">
         Job Details
       </div>
-      <div className="font-normal text-lg flex">
+      <div className="font-normal text-lg flex sm:mt-6 sm:mb-8">
         <div className="flex items-center hover:cursor-pointer">
           <BookmarkIcon
             isFill={false}
