@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { getDaysBefore, formatSalary } from '../../helpers';
+import { getDaysBefore, formatSalary } from '../../../helpers';
 
 interface TitleProps {
   title: string;

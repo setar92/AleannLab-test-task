@@ -1,3 +1,4 @@
+import leftArrowIcon from './arrow.svg';
 import { BookmarkIcon } from './bookmark';
 import frameIcon from './frame.svg';
 import angleLeftIcon from './left.svg';
@@ -14,4 +15,5 @@ export {
   angleLeftIcon,
   frameIcon,
   saveStarIcon,
+  leftArrowIcon,
 };

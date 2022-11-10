@@ -1,30 +1,37 @@
 import { FC } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
-import { DarkButton } from '..';
+import { ApplyButton, ReturnButton } from '..';
+import { AppRoute } from '../../common/enums';
 import { useAppSelector } from '../../hooks/store/store.hooks';
 import { useGetJobsListQuery } from '../../store/queries/jobs';
-import { AdditionalInfo } from './additional-info';
-import { Descriptions } from './descriptions';
-import { Header } from './header';
-import { Title } from './title';
+import {
+  Title,
+  Header,
+  Descriptions,
+  AdditionalInfo,
+  AttechedImgs,
+} from './details-components';
 
 const Details: FC = () => {
   const { isLoading, isError } = useGetJobsListQuery('');
-
   const { jobs } = useAppSelector((state) => state.jobsList);
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const job = jobs.find((job) => job.id === id);
+  const handleReturn = (): void => {
+    navigate(AppRoute.JOBS);
+  };
 
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>isError</div>;
 
   return (
-    <div className="w-[60%] p-14 md:w-[100%]">
+    <div className="w-[60%] px-48 py-14 md:w-[100%]">
       <Header />
       <div className="mt-10 mb-8 sm:hidden">
-        <DarkButton
+        <ApplyButton
           onClick={(): void => console.log('aplly now')}
           text={'aplly now'}
         />
@@ -38,17 +45,23 @@ const Details: FC = () => {
       )}
       {job && <Descriptions descriptions={job.description} />}
       <div className="mt-10 sm:flex sm:justify-center sm:mb-36">
-        <DarkButton
+        <ApplyButton
           onClick={(): void => console.log('aplly now')}
           text={'aplly now'}
         />
       </div>
       {job && (
-        <AdditionalInfo
-          employments={job?.employment_type}
-          benefits={job?.benefits}
-        />
+        <div className="flex flex-col sm:flex-col-reverse">
+          <AdditionalInfo
+            employments={job?.employment_type}
+            benefits={job?.benefits}
+          />
+          <AttechedImgs imgs={job.pictures} />
+        </div>
       )}
+      <div className="mt-24 ml-[-90px] sm:hidden">
+        <ReturnButton onClick={handleReturn} text="return to job board" />
+      </div>
     </div>
   );
 };
