@@ -20,7 +20,7 @@ const Header: FC = () => {
             src={saveStarIcon}
             alt="saveStarIcon"
           />
-          <span className="ml-4 mr-8 sm:ml-0 sm:text-base">
+          <span className="ml-4 mr-8 sm:ml-0 md:text-base">
             Save to my list
           </span>
         </div>
@@ -30,7 +30,7 @@ const Header: FC = () => {
             src={frameIcon}
             alt="frameIcon"
           />
-          <span className="sm:text-base">Share</span>
+          <span className="md:text-base">Share</span>
         </div>
       </div>
     </header>
