@@ -7,7 +7,7 @@ interface AttechedImgsProps {
 
 const AttechedImgs: FC<AttechedImgsProps> = ({ imgs }) => {
   return (
-    <div className="mt-[86px]">
+    <div className="mt-[86px] sm:mt-[135px]">
       <div className="text-[28px] pb-2 text-dark font-bold border-b-[1px] border-dark/20 mb-4">
         Atteched images
       </div>

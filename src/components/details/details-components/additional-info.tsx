@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { FC } from 'react';
+import uuid from 'react-uuid';
 
 import { EmpoymentButton, BenefitButton } from '../..';
 
@@ -17,13 +18,13 @@ const AdditionalInfo: FC<AdditionalInfoProps> = ({ employments, benefits }) => {
       <div className="text-lg font-normal text-dark mb-3">Employment type</div>
       <div className="flex flex-wrap gap-2">
         {employments.map((emp) => (
-          <EmpoymentButton key={emp} onClick={(): void => {}} text={emp} />
+          <EmpoymentButton key={uuid()} text={emp} />
         ))}
       </div>
       <div className="text-lg font-normal text-dark mt-6 mb-3">Benefits</div>
       <div className="flex flex-wrap gap-2">
         {benefits.map((ben) => (
-          <BenefitButton key={ben} onClick={(): void => {}} text={ben} />
+          <BenefitButton key={uuid()} text={ben} />
         ))}
       </div>
     </div>
