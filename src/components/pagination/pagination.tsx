@@ -36,14 +36,14 @@ const Pagination: FC = () => {
 
   return (
     <nav className="flex w-[100%] justify-center mt-12 items-center mb-16">
-      <div className=" h-[52px] flex justify-center rounded-lg bg-white drop-shadow-md items-center px-4 sm:bg-cardFon">
+      <div className=" h-[52px] flex justify-center rounded-lg bg-white drop-shadow-md items-center px-4 sm:bg-[#F9FAFD] sm:px-0 sm:w-[100%]">
         <button
           className="min-w-max mr-6 md:hidden"
           onClick={(): void => handleAngleClick('left')}
         >
           <img src={angleLeftIcon} alt="angleLeftIcon" />
         </button>
-        <div className="h-8 mr-12 border-r-[1.5px] border-r-gray md:ml-12" />
+        <div className="h-8 mr-12 border-r-[1.5px] border-r-gray/30 md:ml-12" />
         <ul className="flex justify-center text-grey font-bold">
           {pagesNumbers.map((number) => (
             <li
@@ -76,7 +76,7 @@ const Pagination: FC = () => {
             </li>
           )}
         </ul>
-        <div className=" h-8 border-r-[1.5px] ml-12 border-r-gray md:mr-12" />
+        <div className=" h-8 border-r-[1.5px] ml-12 border-r-gray/30 md:mr-12" />
         <button
           className="min-w-max h-14 text-gray/60 font-extrabold ml-6 md:hidden"
           onClick={(): void => handleAngleClick('right')}

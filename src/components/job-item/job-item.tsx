@@ -1,7 +1,8 @@
 import { FC, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import uuid from 'react-uuid';
 
-import { starIcon, locationIcon, BookmarkIcon } from '../../assets';
+import { locationIcon, BookmarkIcon, RateStarIcon } from '../../assets';
 import { AppRoute } from '../../common/enums';
 import { IJob } from '../../common/types';
 import { getDaysBefore, getRandomNumber } from '../../helpers';
@@ -25,7 +26,7 @@ const JobItem: FC<JobItemProps> = ({ job }) => {
     navigate(`${AppRoute.DETAILS}/${job.id}`);
   };
   return (
-    <div className="flex py-6 px-4 bg-white mb-2 rounded-lg drop-shadow-md md:py-3 md:px-2 sm:px-4 sm:pb-7 sm:h-[206px] sm:bg-cardFon">
+    <div className="w-[100%] flex py-6 px-4 bg-white mb-2 rounded-lg drop-shadow-md md:py-3 md:px-2 sm:px-4 sm:pb-7 sm:h-[206px] sm:bg-cardFon">
       <div className="mr-6 md:mr-2 sm:pt-8 sm:mr-5">
         <div className="w-[85px] h-[85px]">
           <img
@@ -38,7 +39,7 @@ const JobItem: FC<JobItemProps> = ({ job }) => {
       <div className="flex grow sm:flex-col-reverse">
         <div className="h-[116px] grow">
           <div
-            className="pb-1.5 h-[56px] font-bold overflow-clip text-xl text-dark/75 mb-2 hover:cursor-pointer md:text-lg hover:underline"
+            className="pb-1.5 h-[56px] font-bold overflow-clip text-xl text-dark mb-2 hover:cursor-pointer md:text-lg hover:underline sm:font-normal"
             onClick={handleClick}
           >
             {job.title}
@@ -57,13 +58,8 @@ const JobItem: FC<JobItemProps> = ({ job }) => {
         </div>
         <div className="flex self-end md:flex-col md:justify-between md:h-[116px] sm:flex-row sm:grow sm:h-auto sm:self-auto sm:pt-1 sm:mb-4">
           <div className="min-w-[154px] flex items-center px-8 justify-start md:justify-end md:px-0 sm:items-start sm:justify-start sm:min-w-max sm:pt-1">
-            {new Array(rate).fill('').map((it, index) => (
-              <img
-                key={index}
-                src={starIcon}
-                alt="starIcon"
-                className="w-4 h-4 sm:w-2.5 sm:h-2.5"
-              />
+            {new Array(rate).fill('').map(() => (
+              <RateStarIcon key={uuid()} />
             ))}
           </div>
           <div className="flex h-[116px] flex-col justify-between items-end truncate md:h-auto">
