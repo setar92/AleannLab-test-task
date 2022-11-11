@@ -71,6 +71,7 @@ const JobItem: FC<JobItemProps> = ({ job }) => {
               <BookmarkIcon
                 isFill={isBookmarkFill}
                 onClick={handleBookmarkClick}
+                className="cursor-pointer"
               />
             </div>
             <div className="font-normal text-base text-gray text-right md:text-sm md:leading-4">

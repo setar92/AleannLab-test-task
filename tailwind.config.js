@@ -11,6 +11,8 @@ module.exports = {
     },
     screens: {
       'ld': { 'max': '1920px' },
+      'xl': { 'max': '1536px' },
+      'lg': { 'max': '1200px' },
       'md': { 'max': '768px' },
       'sm': { 'max': '480px' },
     },
@@ -25,7 +27,12 @@ module.exports = {
         dark: '#3A4562',
         grayText: '#878D9D',
         brightBlue: '#5876C5',
+        empoyBtn: '#55699E',
+        benefitBtn: '#FFCF00',
       },
+    },
+    listStyleType: {
+      square: 'square',
     },
   },
   plugins: [],

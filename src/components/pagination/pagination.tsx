@@ -55,9 +55,7 @@ const Pagination: FC = () => {
                   ' text-brightBlue border-b-brightBlue',
               )}
             >
-              <a href="!#" className="align-middle">
-                {number}
-              </a>
+              {number}
             </li>
           ))}
           {totalPages > 7 && currentPage + 2 < totalPages && (
@@ -74,9 +72,7 @@ const Pagination: FC = () => {
                   ' text-brightBlue border-b-brightBlue',
               )}
             >
-              <a href="!#" className="align-middle">
-                {totalPages}
-              </a>
+              {totalPages}
             </li>
           )}
         </ul>
