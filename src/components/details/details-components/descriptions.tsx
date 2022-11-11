@@ -18,8 +18,8 @@ const Descriptions: FC<DescriptionsProps> = ({ descriptions }) => {
     <div>
       <div className="my-1">{main}</div>
       <div className="text-dark font-bold text-xl mt-8">Responsopilities</div>
-      <div className="mt-4"> {responsopilities} </div>
-      <div className="text-dark font-bold text-xl mt-8">
+      <div className="mt-4 sm:mt-2"> {responsopilities} </div>
+      <div className="text-dark font-bold text-xl mt-8 sm:mt-4">
         Compensation & Benefits
       </div>
       <ul className="list-none mt-4">
