@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { Pagination, JobItem } from '../components';
+import { Pagination, JobItem, Loader } from '../components';
 import { useAppSelector } from '../hooks/store/store.hooks';
 import { useGetJobsListQuery } from '../store/queries/jobs';
 import { selectJobs } from '../store/selectors/current-jobs';
@@ -10,7 +10,7 @@ const JobsPage: FC = () => {
 
   const currentJobs = useAppSelector(selectJobs);
 
-  if (isLoading) return <div>isLoading</div>;
+  if (isLoading) return <Loader />;
   if (isError) return <div>isError</div>;
   return (
     <div className="bg-[#E6E9F2] flex flex-col justify-between  items-center min-h-[calc(100vh-165px)] pt-6 px-6 w-[100%]">

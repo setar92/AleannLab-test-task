@@ -1,8 +1,18 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 
 import { frameIcon, BookmarkIcon, saveStarIcon } from '../../../assets';
+import { changeIsSelected, getSelectedStatus } from '../../../helpers';
 
-const Header: FC = () => {
+interface HeaderProps {
+  id: string;
+}
+
+const Header: FC<HeaderProps> = ({ id }) => {
+  const [isFill, setIsFill] = useState(getSelectedStatus(id));
+  const handleSelectClick = (): void => {
+    changeIsSelected(id);
+    setIsFill(!isFill);
+  };
   return (
     <header className="text-dark flex justify-between border-b-[1px] border-dark/20 md:flex-col md:border-none">
       <div className="text-[28px] pb-2 font-bold md:border-b-[1px] md:border-dark/20">
@@ -11,8 +21,8 @@ const Header: FC = () => {
       <div className="font-normal text-lg flex sm:mt-6 sm:mb-8">
         <div className="flex items-center">
           <BookmarkIcon
-            isFill={false}
-            onClick={(): void => console.log('click')}
+            isFill={isFill}
+            onClick={handleSelectClick}
             className="cursor-pointer sm:hidden"
           />
           <img
