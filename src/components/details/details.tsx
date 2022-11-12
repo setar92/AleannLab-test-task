@@ -25,9 +25,8 @@ const Details: FC = () => {
     navigate(AppRoute.JOBS);
   };
 
-  const handleApply = (): void => {
-    console.log('aplly now logic');
-  };
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  const handleApply = (): void => {};
 
   if (isLoading) return <Loader />;
   if (isError) return <ErrorToast message={JSON.stringify(error)} />;
@@ -58,7 +57,7 @@ const Details: FC = () => {
           <AttechedImgs imgs={job.pictures} />
         </div>
       )}
-      <div className="mt-24 mb-32 ml-[-90px] xl:ml-0 lg:mb-12 md:hidden  ">
+      <div className="mt-24 mb-40 ml-[-90px] xl:mb-20 xl:ml-[-20px] lg:ml-0 lg:mb-12 md:hidden  ">
         <ReturnButton onClick={handleReturn} text="return to job board" />
       </div>
     </div>

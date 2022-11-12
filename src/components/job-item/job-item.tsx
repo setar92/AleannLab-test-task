@@ -51,9 +51,9 @@ const JobItem: FC<JobItemProps> = ({ job }) => {
           <div className="mb-2 text-grayText overflow-clip max-h-6">
             Address <span className=" text-sm">&#128900;</span> {job.address}
           </div>
-          <div className="flex text-grayText overflow-clip">
+          <div className="flex text-grayText overflow-clip flex-nowrap ">
             <img className="mr-2" src={locationIcon} alt="locationIcon" />
-            <span>
+            <span className="flex flex-nowrap overflow-clip">
               {job.location.lat.toFixed(5) +
                 ', ' +
                 job.location.long.toFixed(5)}
