@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-import { ApplyButton, Loader, ReturnButton } from '..';
+import { ApplyButton, ErrorToast, Loader, ReturnButton } from '..';
 import { AppRoute } from '../../common/enums';
 import { useAppSelector } from '../../hooks/store/store.hooks';
 import { useGetJobsListQuery } from '../../store/queries/jobs';
@@ -15,7 +15,7 @@ import {
 
 const Details: FC = () => {
   const navigate = useNavigate();
-  const { isLoading, isError } = useGetJobsListQuery('');
+  const { isLoading, isError, error } = useGetJobsListQuery('');
 
   const { jobs } = useAppSelector((state) => state.jobsList);
   const { id } = useParams();
@@ -30,7 +30,7 @@ const Details: FC = () => {
   };
 
   if (isLoading) return <Loader />;
-  if (isError) return <div>isError</div>;
+  if (isError) return <ErrorToast message={JSON.stringify(error)} />;
 
   return (
     <div className="max-w-[720px] mr-32 lg:max-w-[100%] lg:mr-0 xl:mr-20">
