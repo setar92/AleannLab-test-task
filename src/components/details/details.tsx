@@ -25,9 +25,8 @@ const Details: FC = () => {
     navigate(AppRoute.JOBS);
   };
 
-  const handleApply = (): void => {
-    console.log('aplly now logic');
-  };
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  const handleApply = (): void => {};
 
   if (isLoading) return <Loader />;
   if (isError) return <ErrorToast message={JSON.stringify(error)} />;
