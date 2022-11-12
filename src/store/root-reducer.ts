@@ -1,1 +1,1 @@
-export { reducer as jobsList } from './jobs/slice';
+export { reducer as jobs } from './jobs/slice';
