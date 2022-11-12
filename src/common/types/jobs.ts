@@ -5,24 +5,21 @@ interface IJob {
   phone: string;
   title: string;
   salary: string;
-  address: string;
+  adress: string;
   benefits: string[];
   location: {
     lat: number;
     long: number;
   };
   pictures: string[];
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt: FormData;
+  updatedAt: FormData;
   description: string;
   employment_type: string[];
 }
 
-type JobsState = {
+interface JobsState {
   jobs: IJob[];
-  currentPage: number;
-  jobsPerPage: number;
-  totalPages: number;
-};
+}
 
 export type { IJob, JobsState };
