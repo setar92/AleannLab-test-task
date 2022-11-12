@@ -11,7 +11,7 @@ const DetailesPage: FC = () => {
   });
 
   return (
-    <div className="bg-white w-[100wh] py-14 px-8 flex justify-center lg:flex-col sm:px-4 sm:pt-6 sm:pb-9">
+    <div className="bg-white w-[100wh] py-9 px-8 flex justify-center lg:flex-col sm:px-4 sm:pt-6">
       <Details />
       <div className="hidden text-[28px] pb-2 text-dark font-bold border-b-[1px] border-dark/20 lg:block mb-5 mt-16">
         Contacts

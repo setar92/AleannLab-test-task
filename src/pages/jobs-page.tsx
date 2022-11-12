@@ -13,8 +13,8 @@ const JobsPage: FC = () => {
   if (isLoading) return <div>isLoading</div>;
   if (isError) return <div>isError</div>;
   return (
-    <div className="bg-[#E6E9F2] flex justify-between flex-col items-center min-h-[calc(100vh-165px)] pt-6 px-6 w-[100%]">
-      <div className="w-[100%]">
+    <div className="bg-[#E6E9F2] flex flex-col justify-between  items-center min-h-[calc(100vh-165px)] pt-6 px-6 w-[100%]">
+      <div className="w-[100%] flex flex-col items-center">
         {currentJobs.map((job) => (
           <JobItem key={job.id} job={job} />
         ))}
