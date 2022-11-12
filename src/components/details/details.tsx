@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-import { ApplyButton, ReturnButton } from '..';
+import { ApplyButton, Loader, ReturnButton } from '..';
 import { AppRoute } from '../../common/enums';
 import { useAppSelector } from '../../hooks/store/store.hooks';
 import { useGetJobsListQuery } from '../../store/queries/jobs';
@@ -29,12 +29,12 @@ const Details: FC = () => {
     console.log('aplly now logic');
   };
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <Loader />;
   if (isError) return <div>isError</div>;
 
   return (
     <div className="max-w-[720px] mr-32 lg:max-w-[100%] lg:mr-0 xl:mr-20">
-      <Header />
+      <Header id={id as string} />
       <div className="mt-10 mb-8 sm:hidden">
         <ApplyButton onClick={handleApply} text={'aplly now'} />
       </div>

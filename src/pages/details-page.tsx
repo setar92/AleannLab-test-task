@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import { useJsApiLoader } from '@react-google-maps/api';
 
-import { Details, Map } from '../components';
+import { Details, Loader, Map } from '../components';
 
 const DetailesPage: FC = () => {
   const { isLoaded } = useJsApiLoader({
@@ -16,7 +16,7 @@ const DetailesPage: FC = () => {
       <div className="hidden text-[28px] pb-2 text-dark font-bold border-b-[1px] border-dark/20 lg:block mb-5 mt-16">
         Contacts
       </div>
-      {isLoaded ? <Map /> : <div>Loading...</div>}
+      {isLoaded ? <Map /> : <Loader />}
     </div>
   );
 };

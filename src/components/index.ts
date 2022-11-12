@@ -7,3 +7,4 @@ export { ApplyButton } from './buttons/apply-button';
 export { EmpoymentButton } from './buttons/employment-button';
 export { BenefitButton } from './buttons/benefit-button';
 export { ReturnButton } from './buttons/return-button';
+export { Loader } from './loader/loader';
