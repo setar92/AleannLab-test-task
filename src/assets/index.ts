@@ -4,12 +4,11 @@ import frameIcon from './frame.svg';
 import angleLeftIcon from './left.svg';
 import locationMapIcon from './location-map.svg';
 import locationIcon from './location.svg';
+import { RateStarIcon } from './rate-star';
 import angleRightIcon from './right.svg';
 import saveStarIcon from './saveStar.svg';
-import starIcon from './star.svg';
 
 export {
-  starIcon,
   BookmarkIcon,
   locationIcon,
   angleRightIcon,
@@ -18,4 +17,5 @@ export {
   saveStarIcon,
   leftArrowIcon,
   locationMapIcon,
+  RateStarIcon,
 };
